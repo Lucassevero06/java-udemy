@@ -1,5 +1,8 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");Streingç
+        System.out.println("Hello world!");
+
+        String nome = "Lucas";
+        System.out.println("Nome: " + nome);
     }
-}5255hgdfgh
+}
