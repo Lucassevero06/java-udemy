@@ -19,7 +19,7 @@ public class OperadoresDeAtribuicaoAcumulativa {
             for (int i = 0; i < (minutosTelefone - 100); i++) {
                 minutosAMais++;
             }
-            System.out.printf("Valor a pagar $ %.2f", planoBasico + (minutosAMais * 2.00));
+            System.out.printf("Valor a pagar R$ %.2f", planoBasico + (minutosAMais * 2.00));
         }
 
         leitor.close();
