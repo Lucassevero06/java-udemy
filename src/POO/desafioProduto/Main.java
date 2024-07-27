@@ -9,36 +9,37 @@ public class Main {
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("digite o nome do seu produto: ");
-        Produto produto;
-        produto = new Produto();
-        produto.nome = sc.nextLine();
+        System.out.println("digite o name do seu product: ");
+        String name = sc.nextLine();
 
-        System.out.println("digite o preco do seu produto: ");
-        produto.preco = sc.nextDouble();
+        System.out.println("digite o price do seu product: ");
+        double price = sc.nextDouble();
 
-        System.out.println("digite a quantidade desse produto no estoque: ");
-        produto.estoque = sc.nextInt();
+        System.out.println("digite a quantidade desse product no quantity: ");
+        int quantity = sc.nextInt();
 
-        System.out.println("nome do produto: " + produto.nome);
-        System.out.println("preco do produto: " + produto.preco);
-        System.out.println("estoque do produto: " + produto.estoque);
+        // instanciando produto e atribuindo valores com construtor
+        Product product = new Product(name, price, quantity);
 
-        System.out.println("valor total no estoque: " + String.format("%.2f",produto.totalValueInStock()));
+        System.out.println("name do product: " + product.name);
+        System.out.println("price do product: " + product.price);
+        System.out.println("quantity do product: " + product.quantity);
 
-        System.out.println("digite a quantidade que deseja adicionar no estoque: ");
-        int qtd = sc.nextInt();
-        produto.addProducts(qtd);
+        System.out.println("valor total no quantity: " + String.format("%.2f",product.totalValueInStock()));
 
-        System.out.println("A quantidade no estoque é: " + produto.estoque);
-        System.out.println("valor total no estoque: " + String.format("%.2f",produto.totalValueInStock()));
+        System.out.println("digite a quantidade que deseja adicionar no quantity: ");
+        quantity = sc.nextInt();
+        product.addProducts(quantity);
 
-        System.out.println("digite a quantidade que deseja remover do estoque: ");
-        int qtd2 = sc.nextInt();
-        produto.removeProducts(qtd2);
+        System.out.println("A quantidade no quantity é: " + product.quantity);
+        System.out.println("valor total no quantity: " + String.format("%.2f",product.totalValueInStock()));
 
-        System.out.println("A quantidade no estoque é: " + produto.estoque);
-        System.out.println("valor total no estoque: " + String.format("%.2f",produto.totalValueInStock()));
+        System.out.println("digite a quantidade que deseja remover do quantity: ");
+        quantity = sc.nextInt();
+        product.removeProducts(quantity);
+
+        System.out.println("A quantidade no quantity é: " + product.quantity);
+        System.out.println("valor total no quantity: " + String.format("%.2f",product.totalValueInStock()));
 
         sc.close();
 
