@@ -13,6 +13,16 @@ public class Product {
         this.quantity = quantity;
     }
 
+    //sobrecarga
+    public Product() {
+    }
+
+    //sobrecarga
+    public Product(String name, double price) {
+        this.name = name;
+        this.price = price;
+    }
+
     public double totalValueInStock() {
         return price * quantity;
     }
