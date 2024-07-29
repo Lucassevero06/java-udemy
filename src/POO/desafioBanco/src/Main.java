@@ -18,11 +18,14 @@ public class Main {
         System.out.println("Por favor digite o numero da sua conta: ");
         int numeroConta = sc.nextInt();
 
-        System.out.println("Por favor digite seu nome: ");
-        String nomeTitular = sc.next();
+        System.out.println("Por favor digite seu primeiro nome: ");
+        String primeiroNome = sc.next();
+
+        System.out.println("Por favor digite seu sobrenome: ");
+        String sobrenome = sc.next();
 
         System.out.println("Deseja fazer um saque inicial? (s/n)");
-        String resposta = sc.nextLine();
+        String resposta = sc.next();
 
         if(resposta.charAt(0) == 's') {
             System.out.println("Por favor digite o valor inicial: ");
@@ -34,12 +37,26 @@ public class Main {
 
         Conta conta;
         Titular titular;
-        titular = new Titular(nomeTitular);
+        titular = new Titular(primeiroNome, sobrenome);
         conta = new Conta(numeroConta, titular, saldo);
 
-        System.out.println(conta.getNumeroConta());
-        System.out.println(conta.getNomeTitular());
-        System.out.println(conta.getSaldo());
+        System.out.printf("Conta: %d, Titular: %s, Saldo: R$ %.2f %n", conta.getNumeroConta(), conta.getNomeTitular(), conta.getSaldo());
+
+        System.out.println("Seja bem-vindo(a) " + conta.getNomeTitular() + "!");
+
+        System.out.println("Deposite um valor");
+        double deposito = sc.nextDouble();
+        conta.depositar(deposito);
+        System.out.println("Deposito realizado!");
+
+        System.out.printf("Conta: %d, Titular: %s, Saldo: R$ %.2f %n", conta.getNumeroConta(), conta.getNomeTitular(), conta.getSaldo());
+
+        System.out.println("Saque um valor");
+        double saque = sc.nextDouble();
+        conta.sacar(saque);
+        System.out.println("Saque realizado!");
+
+        System.out.printf("Conta: %d, Titular: %s, Saldo: R$ %.2f %n", conta.getNumeroConta(), conta.getNomeTitular(), conta.getSaldo());
 
         sc.close();
     }
