@@ -10,6 +10,7 @@ public class Main {
     public static void main(String[] args) {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
+        double saldo = 0;
 
         System.out.println("Bem-vindo ao sistema de banco POO!");
         System.out.println("Preciso de algumas informações para a criação de sua conta!");
@@ -25,10 +26,10 @@ public class Main {
 
         if(resposta.charAt(0) == 's') {
             System.out.println("Por favor digite o valor inicial: ");
-            double saldo = sc.nextDouble();
+            saldo = sc.nextDouble();
         } else if(resposta.charAt(0) == 'n') {
             System.out.println("Ok prossiga!");
-            double saldo = 0;
+            saldo = 0;
         }
 
         Conta conta;
