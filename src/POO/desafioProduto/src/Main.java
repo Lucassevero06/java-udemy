@@ -1,4 +1,6 @@
-package POO.desafioProduto;
+package POO.desafioProduto.src;
+
+import POO.desafioProduto.entities.Product;
 
 import java.util.Locale;
 import java.util.Scanner;
