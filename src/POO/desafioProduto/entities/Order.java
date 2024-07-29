@@ -1,6 +1,7 @@
 package POO.desafioProduto.entities;
 
 import java.util.Date;
+import  POO.desafioProduto.entities.Product;
 
 public class Order {
     private Date date;
