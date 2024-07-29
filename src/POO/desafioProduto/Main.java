@@ -18,9 +18,12 @@ public class Main {
         // instanciando produto e atribuindo valores com construtor
         Product product = new Product(name, price);
 
-        System.out.println("name do product: " + product.name);
-        System.out.println("price do product: " + product.price);
-        System.out.println("quantity do product: " + product.quantity);
+        product.setName("Computer");
+        product.setPrice(1200.00);
+
+        System.out.println("name do product: " + product.getName());
+        System.out.println("price do product: " + product.getPrice());
+        System.out.println("quantity do product: " + product.getQuantity());
 
         System.out.println("valor total no quantity: " + String.format("%.2f",product.totalValueInStock()));
 
@@ -28,14 +31,14 @@ public class Main {
         int quantity = sc.nextInt();
         product.addProducts(quantity);
 
-        System.out.println("A quantidade no quantity é: " + product.quantity);
+        System.out.println("A quantidade no quantity é: " + product.getQuantity());
         System.out.println("valor total no quantity: " + String.format("%.2f",product.totalValueInStock()));
 
         System.out.println("digite a quantidade que deseja remover do quantity: ");
         quantity = sc.nextInt();
         product.removeProducts(quantity);
 
-        System.out.println("A quantidade no quantity é: " + product.quantity);
+        System.out.println("A quantidade no quantity é: " + product.getQuantity());
         System.out.println("valor total no quantity: " + String.format("%.2f",product.totalValueInStock()));
 
         sc.close();
