@@ -41,7 +41,7 @@ public class Listas {
             System.out.println(nome); // exibindo nomes
         }
 
-        System.out.println("------------------------------------------------");
+        System.out.println("--------------------------------------------------");
 
         list.removeIf(x -> x.charAt(0) == 'M'); // removendo itens do array que comecem com a letra M
 
