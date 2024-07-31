@@ -8,10 +8,9 @@ public class Main {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Quantas pessoas serão digitadas? ");
+        System.out.print("Quantas pessoas serão digitadas? ");
         int n = sc.nextInt();
         Pessoa[] vect = new Pessoa[n];
-        sc.nextLine();
 
         for (int i = 0; i < vect.length; i++) {
             System.out.printf("Dados da %d pessoa: \n", i + 1);
@@ -19,7 +18,6 @@ public class Main {
             String nome = sc.nextLine();
             System.out.print("Idade: ");
             int idade = sc.nextInt();
-            sc.nextLine();
             vect[i] = new Pessoa(nome, idade);
         }
 
