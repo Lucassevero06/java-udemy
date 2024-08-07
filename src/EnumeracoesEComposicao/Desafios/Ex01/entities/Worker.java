@@ -10,7 +10,7 @@ public class Worker {
 
     private String name;
     private WorkerLevel level;
-    private Double baseSalary;
+    private double baseSalary;
 
     private Department department;
     private List<HourContract> contracts = new ArrayList<>();
@@ -18,7 +18,7 @@ public class Worker {
     public Worker() {
     }
 
-    public Worker(String name, WorkerLevel level, Double baseSalary, Department department) {
+    public Worker(String name, WorkerLevel level, double baseSalary, Department department) {
         this.name = name;
         this.level = level;
         this.baseSalary = baseSalary;
@@ -37,7 +37,7 @@ public class Worker {
         contracts.remove(contract);
     }
 
-    public double income (int year, int month) {
+    public double income (int month, int year) {
         double sum = this.baseSalary;
         Calendar cal = Calendar.getInstance();
         for (HourContract c : contracts) {
@@ -68,7 +68,7 @@ public class Worker {
         this.level = level;
     }
 
-    public Double getBaseSalary() {
+    public double getBaseSalary() {
         return baseSalary;
     }
 
